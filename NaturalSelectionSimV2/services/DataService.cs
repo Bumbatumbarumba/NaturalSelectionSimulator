@@ -16,17 +16,25 @@ namespace NaturalSelectionSimV2.services
         public static Space[,] Board { get; set; }
         private static Random randomizer = new Random();
 
-
+        //
+        // Init a board object to be a Width by Height 2D array.
+        //
         public static void InitBoard()
         {
             Board = new Space[Width,Height];
         }
 
+        //
+        // Randomly populate spaces with creatures.
+        //
         public static void PopulateSpace(Creature child)
         {
 
         }
 
+        //
+        // Find a list of adjacent spaces to interact with.
+        //
         public static int[] FindValidAdjacentSpace(Creature funcCaller)
         {
             int[] result = { };
@@ -63,9 +71,14 @@ namespace NaturalSelectionSimV2.services
         //
         // Resets a given space to empty.
         //
-        public static void CreatureDies(Creature c)
+
+        //
+        // When a creature dies or moves, a space space is set to be "empty".
+        //
+        public static void MakeSpaceEmpty(int xpos, int ypos)
         {
-            Board[c.Xpos, c.Ypos] = null;
+            Board[xpos, ypos].HasCreature = false;
+            Board[xpos, ypos].CurrentCreature = null;
         }
     }
 }

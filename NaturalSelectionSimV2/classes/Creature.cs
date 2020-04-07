@@ -34,20 +34,18 @@ namespace NaturalSelectionSimV2.classes
              */
         }
 
-
-        public void Mate(Creature partner)
+        public void Move()
         {
-            if (!HasMated && !partner.HasMated)
-            {
-                if (Age >= MaturityAge && partner.Age >= MaturityAge)
-                {
-                    
-                    HasMated = true;
-                }
-            }
+
         }
 
-        public Creature GenerateOffSpring(Creature parent1, Creature parent2)
+
+        public void Reproduce()
+        {
+
+        }
+
+        public Creature GenerateOffSpring()
         {
             Creature child = new Creature();
 

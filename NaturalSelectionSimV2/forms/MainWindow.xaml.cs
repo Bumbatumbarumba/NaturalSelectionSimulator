@@ -24,5 +24,27 @@ namespace NaturalSelectionSimV2
         {
             InitializeComponent();
         }
+
+        private void BtnStart_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnExit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnGoToSpeciesMaker_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SpeciesBuilder_Checked(object sender, RoutedEventArgs e)
+        {
+            RadioButton temp = (RadioButton)sender;
+            //btnGoToSpeciesMaker.IsEnabled = !(temp.Name == "rdbRandomSpecies");
+            
+        }
     }
 }
